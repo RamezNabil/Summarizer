@@ -1,6 +1,6 @@
 from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config, AutoTokenizer, AutoModelWithLMHead
 import torch
-from WebsiteScripping import ReadFromWebSite
+from webScraping import ReadFromWebSite
 from ReadDocument import ReadingFromPDF
 
 
