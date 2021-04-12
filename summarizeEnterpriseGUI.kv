@@ -91,16 +91,10 @@ PageManager:
         ############################################################
 
         # label where summarized version appears
-        Label:
+        TextInput:
             id: summarized_label_id
-            text: "summarized version"
-            canvas.before:
-                Color:
-                    rgba:(0, 0, 0,1)
-                Rectangle:
-                    size: self.size
-                    pos: self.pos
-            color: (1,1,1,1)
+            multiline:True
+            color: (0,0,0,0)
             #size_hint: (0.5,1)
             size_hint_y:None
             width: 300
@@ -211,9 +205,9 @@ PageManager:
         ###################################################################
         FileChooserIconView:
             id: fileChooser
-            path:"/home/abanoub/Downloads"
+            path:"D:\PyCharm Projects\GP testing"
             on_selection: filePage_ID.selectedFile(fileChooser.selection)
-            
+
 
         ###################################################################
 
@@ -262,7 +256,7 @@ PageManager:
                 on_release:
                     root.manager.current = "textPage"
                     root.manager.transition.direction = "left"
-            
+
                 size_hint_y:None
                     height: 50
                     width: 200
@@ -310,7 +304,7 @@ PageManager:
             on_release:
                 root.manager.current = "mainPage"
                 root.manager.transition.direction = "right"
-        
+
 
             size_hint_y:None
                 height: 50
@@ -341,4 +335,3 @@ PageManager:
             size: self.size
             pos: self.pos
             radius: [58]
-
